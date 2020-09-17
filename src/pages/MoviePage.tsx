@@ -14,9 +14,9 @@ type MovieData = {
   };
   
   
-function getMovieByID(imdbid: string) {
+//function getMovieByID(imdbid: string) {
 //get movie details
-};
+//};
 
 export default function MoviePage() {
   const routeParams = useParams<{ imdbID: string }>();
