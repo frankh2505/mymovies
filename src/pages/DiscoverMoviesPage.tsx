@@ -1,5 +1,6 @@
 // src/pages/DiscoverMoviesPage.tsx
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 type Movie = {
     Title: string;
@@ -46,6 +47,9 @@ type SearchState =
         "Poster":"https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
     }
 ]
+
+                {movie.Title} ({movie.Year})
+
   */
 
     setState({ status: "success", data });
@@ -70,8 +74,19 @@ type SearchState =
         <div>
           <h2>Search results</h2>
           {state.data.Search.slice(0, 10).map(movie => {
-            return <div>{movie.Title} ({movie.Year}) <br/> <img src={movie.Poster} alt=""></img> </div>;
+            return <div>
+
+            <Link to={`/discover/${movie.imdbID}`}><strong>{movie.Title}</strong> ({movie.Year})</Link>
+
+
+             <br/>
+              <img src={movie.Poster} alt=""></img>
+               </div>
+               
+               ;
           })}
+
+
         </div>
       )}
 

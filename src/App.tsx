@@ -7,6 +7,7 @@ import NavBar from './components/NavBar';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import DiscoverMoviesPage from './pages/DiscoverMoviesPage';
+import MoviePage from './pages/MoviePage';
 
 function App() {
   return (
@@ -16,8 +17,11 @@ function App() {
 
     <Switch>
       <Route path="/about" component={AboutPage} />
+      <Route path="/discover/:imdbID" component={MoviePage} />
       <Route path="/discover" component={DiscoverMoviesPage} />
       <Route path="/" component={HomePage} />
+
+      
     </Switch>
 
     </div>
