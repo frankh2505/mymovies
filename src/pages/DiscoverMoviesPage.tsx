@@ -70,11 +70,11 @@ type SearchState =
         <div>
           <h2>Search results</h2>
           {state.data.Search.slice(0, 10).map(movie => {
-            return <div>{movie.Title} ({movie.Year})</div>;
+            return <div>{movie.Title} ({movie.Year}) <br/> <img src={movie.Poster}></img> </div>;
           })}
         </div>
       )}
-      
+
     </div>
   );
 }
